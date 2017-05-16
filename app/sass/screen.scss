@@ -1,0 +1,67 @@
+@import "compass/reset";
+
+body {
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+h1{
+	font-size: 56px;
+}
+h2{
+	font-size: 36px;
+}
+.head, .prompt, .canvas, .timer {
+	padding: 10px;
+}
+.inline-head{
+	display: flex;
+}
+.canvas{
+	text-align: center;
+	display:block;
+	width: 95%;
+	height: 80%;
+}
+#minutes, #seconds, #colon{
+	font-family: sans-serif;
+	font-size: 1.5em;
+	color: red;
+}
+#juice-canvas{
+	border: 1px solid #333;
+}
+
+//iphone+ landscape
+@media only screen and (max-width: 800px) {
+	h1 { 
+		font-size: 25px;
+	}
+	h2 { 
+		font-size: 20px;
+	}
+	.canvas{
+		width:97%;
+		height:65%;
+	}
+}
+
+//most mobile portrait
+@media only screen and (max-width: 500px) {
+	body{
+		padding: none;
+	}
+	h1{
+		font-size: 36px;
+	}
+	h2{
+		font-size: 26px;
+	}
+	.head, .prompt, .timer, .canvas {
+		padding: 12px;
+	}
+	.canvas{
+		width:92%;
+		height:70%;
+	}
+}
