@@ -63,34 +63,90 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 3, ../sass/screen.scss */
+/* line 5, ../sass/screen.scss */
 body {
   font-family: sans-serif;
   font-size: 14px;
   color: #333;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 11, ../sass/screen.scss */
 h1 {
   font-size: 56px;
 }
 
-/* line 11, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 h2 {
   font-size: 36px;
 }
 
-/* line 15, ../sass/screen.scss */
-.head, .prompt, .canvas, .timer {
+/* line 19, ../sass/screen.scss */
+.head,
+.prompt,
+.canvas,
+.timer {
   padding: 10px;
 }
 
-/* line 18, ../sass/screen.scss */
-.inline-head {
-  display: flex;
+/* line 26, ../sass/screen.scss */
+.head {
+  text-align: center;
+  width: 100%;
+  height: 12%;
+  position: fixed;
+  background-color: white;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
+.start-game,
+.prompt,
+.play-game {
+  text-align: center;
+}
+/* line 39, ../sass/screen.scss */
+.start-game h1,
+.prompt h1,
+.play-game h1 {
+  font-size: 40px;
+}
+
+/* line 45, ../sass/screen.scss */
+.start-game {
+  background-color: #604087;
+  padding-top: 22em;
+  padding-bottom: 20em;
+}
+/* line 49, ../sass/screen.scss */
+.start-game a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 55, ../sass/screen.scss */
+.prompt {
+  padding-top: 15em;
+  padding-bottom: 17em;
+  background-color: #8560b3;
+}
+/* line 59, ../sass/screen.scss */
+.prompt h2 {
+  color: #fff;
+}
+
+/* line 64, ../sass/screen.scss */
+.play-game {
+  padding-top: 2em;
+  padding-bottom: 3.5em;
+  color: #fff;
+  background-color: #604087;
+}
+/* line 69, ../sass/screen.scss */
+.play-game a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 75, ../sass/screen.scss */
 .canvas {
   text-align: center;
   display: block;
@@ -98,57 +154,61 @@ h2 {
   height: 80%;
 }
 
-/* line 28, ../sass/screen.scss */
-#minutes, #seconds, #colon {
+/* line 82, ../sass/screen.scss */
+#minutes,
+#seconds,
+#colon {
   font-family: sans-serif;
   font-size: 1.5em;
   color: red;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 #juice-canvas {
   border: 1px solid #333;
 }
 
 @media only screen and (max-width: 800px) {
-  /* line 40, ../sass/screen.scss */
-  h1 {
-    font-size: 25px;
-  }
-
-  /* line 41, ../sass/screen.scss */
+  /* line 96, ../sass/screen.scss */
   h2 {
     font-size: 20px;
   }
 
-  /* line 43, ../sass/screen.scss */
+  /* line 100, ../sass/screen.scss */
   .canvas {
     width: 97%;
     height: 65%;
   }
 }
 @media only screen and (max-width: 500px) {
-  /* line 52, ../sass/screen.scss */
+  /* line 108, ../sass/screen.scss */
   body {
     padding: none;
   }
 
-  /* line 56, ../sass/screen.scss */
+  /* line 112, ../sass/screen.scss */
   h1 {
-    font-size: 36px;
+    font-size: 56px;
   }
 
-  /* line 60, ../sass/screen.scss */
+  /* line 116, ../sass/screen.scss */
   h2 {
     font-size: 26px;
   }
 
-  /* line 64, ../sass/screen.scss */
-  .head, .prompt, .timer, .canvas {
+  /* line 120, ../sass/screen.scss */
+  .head,
+  .timer,
+  .canvas {
     padding: 12px;
   }
 
-  /* line 68, ../sass/screen.scss */
+  /* line 126, ../sass/screen.scss */
+  .canvas {
+    overflow: hidden;
+  }
+
+  /* line 129, ../sass/screen.scss */
   .canvas {
     width: 92%;
     height: 70%;

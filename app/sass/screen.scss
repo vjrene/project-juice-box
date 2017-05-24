@@ -1,67 +1,133 @@
 @import "compass/reset";
+$main-color: #604087;
+$highlight: #8560b3;
 
 body {
-	font-family: sans-serif;
-	font-size: 14px;
-	color: #333;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #333;
 }
-h1{
-	font-size: 56px;
+
+h1 {
+  font-size: 56px;
 }
-h2{
-	font-size: 36px;
+
+h2 {
+  font-size: 36px;
 }
-.head, .prompt, .canvas, .timer {
-	padding: 10px;
+
+.head,
+.prompt,
+.canvas,
+.timer {
+  padding: 10px;
 }
-.inline-head{
-	display: flex;
+
+.head {
+  text-align: center;
+  width: 100%;
+  height: 12%;
+  position: fixed;
+  background-color: white;
 }
-.canvas{
-	text-align: center;
-	display:block;
-	width: 95%;
-	height: 80%;
+
+.start-game,
+.prompt,
+.play-game {
+  text-align: center;
+
+  h1 {
+    font-size: 40px;
+  }
 }
-#minutes, #seconds, #colon{
-	font-family: sans-serif;
-	font-size: 1.5em;
-	color: red;
+
+//works for browser/gs5
+.start-game {
+  background-color: $main-color;
+  padding-top: 22em;
+  padding-bottom: 20em;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
-#juice-canvas{
-	border: 1px solid #333;
+
+.prompt {
+  padding-top: 15em;
+  padding-bottom: 17em;
+  background-color: $highlight;
+  h2 {
+    color: #fff;
+  }
+}
+
+.play-game {
+  padding-top: 2em;
+  padding-bottom: 3.5em;
+  color: #fff;
+  background-color: $main-color;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.canvas {
+  text-align: center;
+  display:block;
+  width: 95%;
+  height: 80%;
+}
+
+#minutes,
+#seconds,
+#colon {
+  font-family: sans-serif;
+  font-size: 1.5em;
+  color: red;
+}
+
+#juice-canvas {
+  border: 1px solid #333;
 }
 
 //iphone+ landscape
 @media only screen and (max-width: 800px) {
-	h1 { 
-		font-size: 25px;
-	}
-	h2 { 
-		font-size: 20px;
-	}
-	.canvas{
-		width:97%;
-		height:65%;
-	}
+  h2 { 
+    font-size: 20px;
+  }
+
+  .canvas {
+    width:97%;
+    height:65%;
+  }
 }
 
 //most mobile portrait
 @media only screen and (max-width: 500px) {
-	body{
-		padding: none;
-	}
-	h1{
-		font-size: 36px;
-	}
-	h2{
-		font-size: 26px;
-	}
-	.head, .prompt, .timer, .canvas {
-		padding: 12px;
-	}
-	.canvas{
-		width:92%;
-		height:70%;
-	}
+  body {
+    padding: none;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .head,
+  .timer,
+  .canvas {
+    padding: 12px;
+  }
+
+  .canvas {
+    overflow: hidden;
+  }
+  .canvas {
+    width:92%;
+    height:70%;
+  }
 }
