@@ -1,0 +1,183 @@
+@import "compass/reset";
+$main-color: #604087;
+$highlight: #8560b3;
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+.head,
+.prompt,
+.canvas,
+.timer {
+  padding: 10px;
+}
+
+.head {
+  text-align: center;
+  width: 100%;
+  height: 12%;
+  position: fixed;
+  background-color: white;
+}
+
+.start-game,
+.prompt,
+.play-game {
+  text-align: center;
+
+  h1 {
+    font-size: 40px;
+  }
+}
+
+//works for browser/gs5
+.start-game {
+  background-color: $main-color;
+  padding-top: 22em;
+  padding-bottom: 20em;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.prompt {
+  padding-top: 15em;
+  padding-bottom: 17em;
+  background-color: $highlight;
+  h2 {
+    color: #fff;
+  }
+}
+
+.play-game {
+  padding-top: 2em;
+  padding-bottom: 3.5em;
+  color: #fff;
+  background-color: $main-color;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.canvas {
+  text-align: center;
+  display:block;
+  width: 95%;
+  height: 80%;
+}
+
+#minutes,
+#seconds,
+#colon {
+  font-family: sans-serif;
+  font-size: 1.5em;
+  color: red;
+}
+
+#juice-canvas {
+  border: 1px solid #333;
+}
+
+//iphone+ landscape
+@media only screen and (max-width: 800px) {
+  h2 { 
+    font-size: 20px;
+  }
+
+  .canvas {
+    width:97%;
+    height:65%;
+  }
+}
+
+// nexus 5X portrait
+@media only screen and (max-width: 732px) {
+  .play-game {
+    padding-bottom: 5em;
+  }
+}
+
+//iphone 6 portrait
+@media only screen and (max-width: 667px) {
+  .start-game {
+    padding-top: 25em;
+    padding-bottom: 19em;
+  }
+
+  .prompt {
+    padding-top: 20em;
+    padding-bottom: 30em;
+  }
+
+  .play-game {
+    padding-top: 15em;
+    padding-bottom: 19em;
+  }
+}
+
+// iphone 6 plus
+@media only screen and (max-width: 736px) { 
+  .start-game {
+  padding-top: 30em;
+  padding-bottom: 19em;
+  }
+
+  .play-game {
+  padding-top: 25em;
+  padding-bottom: 20em;
+  }
+
+}
+
+// iphone 5 portrait
+@media only screen and (max-width: 568px) {
+  .prompt {
+    padding-bottom: 10em; 
+  }
+
+  .play-game {
+    padding-top: 3.5em;
+  }
+}
+
+// most mobile portrait
+@media only screen and (max-width: 500px) {
+  body {
+    padding: none;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .head,
+  .timer,
+  .canvas {
+    padding: 12px;
+  }
+
+  .canvas {
+    overflow: hidden;
+  }
+  .canvas {
+    width:92%;
+    height:70%;
+  }
+}
