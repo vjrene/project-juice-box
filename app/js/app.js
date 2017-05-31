@@ -13,7 +13,7 @@ $(document).ready(function() {
   responsiveCanvas();
 });
 
-//mobile and desktop
+//mobile and desktop canvas functionality
 var c = document.getElementById('juice-canvas');
 var ctx = c.getContext('2d');
 var isDrawing = false;
@@ -61,7 +61,7 @@ c.onmousemove = function(e) {
   var rect = c.getBoundingClientRect();
   var x = Math.round((e.clientX - rect.left) / (rect.right - rect.left) * c.width);
   var y = Math.round((e.clientY - rect.top) / (rect.bottom - rect.top) * c.height);
-  if(isDrawing) {
+  if (isDrawing) {
     ctx.lineTo(x,y);
     ctx.stroke();
   }
@@ -72,25 +72,33 @@ c.onmouseup = function(e) {
   isDrawing = false;
 } 
 
-//timer
-function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor((t / 1000) % 60);
-  var minutes = Math.floor((t / 1000 / 60) % 60);
-  return {
-    'total': t,
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
+var playGame = document.getElementById('play-game');
+var juiceTitle = document.getElementById('juice-head');
+var prompt = document.getElementById('toprompt');
+var startGame = document.getElementById('start-game');
+playGame.addEventListener("click", function(e) {
+  //hide title when clicked
+  juiceTitle.style.display = 'none';
+  playGame.style.display = 'none';
+  prompt.style.display = 'none';
+  startGame.style.display = 'none';
 
-function initializeClock(id, endtime) {
-  var clock = document.getElementById('timer');
-  var minutesSpan = clock.querySelector('.minutes');
-  var secondsSpan = clock.querySelector('.seconds');
+  //only start timer when play is hit
+  function getTimeRemaining(endtime) {
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor((t / 1000) % 60);
+    var minutes = Math.floor((t / 1000 / 60) % 60);
+    return {
+      'total': t,
+      'minutes': minutes,
+      'seconds': seconds
+    };
+  }
+
+  var deadline = new Date(Date.parse(new Date()) + 2 * 60 * 1000);
 
   function updateClock() {
-    var t = getTimeRemaining(endtime);
+    var t = getTimeRemaining(deadline);
     var minutesSpan = document.getElementById('minutes');
     var secondsSpan = document.getElementById('seconds');
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
@@ -101,6 +109,4 @@ function initializeClock(id, endtime) {
   }
   updateClock();
   var timeInterval = setInterval(updateClock, 1000);
-}
-var deadline = new Date(Date.parse(new Date()) + 2 * 60 * 1000);
-initializeClock('timer', deadline);
+});

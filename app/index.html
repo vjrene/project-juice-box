@@ -7,24 +7,35 @@
   </head>
   <body>
     <div class="container">
-      <div class="head">
-        <h1>juice-box-draw</h1>
-      </div>
-      <div class="inline-head">
-        <div class="prompt">
-          <h2>prompt</h2>
+      <div id= "juice-head" class="head">
+        <h1>juice-box</h1>
+        <p>sub-heading/clever description.</p>
         </div>
-        <div id="timer" class="timer">
-          <h2>timer</h2>
-          <span id="minutes"></span>
-          <span id="colon">:</span>
-          <span id="seconds"></span>
+        <div id="start-game" class="start-game">
+          <a href="#toprompt"><h1>start game</h1>
+          <h1>&#8595;</h1></a>
         </div>
+          <div id="toprompt" class="prompt">
+            <h1>prompt (from db)</h1><br><br>
+            <h2>next prompt</h2>
+           </div>
+           <div id="play-game" class="play-game">
+             <a href="#gameplay"><h2>play</h2></a>
+           </div>
+          <div id= "gameplay" class="gameplay">
+            <div id="timer" class="timer">
+              <span id="minutes">0</span>
+              <span id="colon">:</span>
+              <span id="seconds">00</span>
+                <div class="canvas">
+                  <canvas id="juice-canvas" width="100" height="100"></canvas>
+                </div>
+            </div>
+          </div>
       </div>
-      <div class="canvas">
-        <canvas id="juice-canvas" width="100" height="100"></canvas>
-      </div>
-    </div>
+    <!-- for dynamic prompts
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script> 
+    <script src="js/config.js"></script> -->
     <script src="js/app.js"></script>
   </body>
 </html>

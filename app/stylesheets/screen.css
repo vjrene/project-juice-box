@@ -95,171 +95,142 @@ h2 {
   height: 12%;
   position: fixed;
   background-color: white;
+  display: block;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 .start-game,
 .prompt,
 .play-game {
   text-align: center;
 }
-/* line 39, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .start-game h1,
 .prompt h1,
 .play-game h1 {
   font-size: 40px;
 }
 
-/* line 45, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 .start-game {
   background-color: #604087;
   padding-top: 22em;
   padding-bottom: 20em;
 }
-/* line 49, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .start-game a {
   color: white;
   text-decoration: none;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .prompt {
   padding-top: 15em;
   padding-bottom: 17em;
   background-color: #8560b3;
 }
-/* line 59, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 .prompt h2 {
   color: #fff;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 .play-game {
   padding-top: 2em;
   padding-bottom: 3.5em;
   color: #fff;
   background-color: #604087;
 }
-/* line 69, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .play-game a {
   color: white;
   text-decoration: none;
 }
 
-/* line 75, ../sass/screen.scss */
-.canvas {
-  text-align: center;
-  display: block;
-  width: 95%;
-  height: 80%;
-}
-
-/* line 82, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 #minutes,
 #seconds,
 #colon {
   font-family: sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   color: red;
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
+.canvas {
+  text-align: center;
+  display: block;
+  width: 95%;
+  height: 95%;
+}
+
+/* line 91, ../sass/screen.scss */
 #juice-canvas {
   border: 1px solid #333;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 360px), screen and (max-height: 600px) {
   /* line 96, ../sass/screen.scss */
-  h2 {
-    font-size: 20px;
-  }
-
-  /* line 100, ../sass/screen.scss */
-  .canvas {
-    width: 97%;
-    height: 65%;
-  }
-}
-@media only screen and (max-width: 732px) {
-  /* line 108, ../sass/screen.scss */
-  .play-game {
-    padding-bottom: 5em;
-  }
-}
-@media only screen and (max-width: 667px) {
-  /* line 115, ../sass/screen.scss */
-  .start-game {
-    padding-top: 25em;
-    padding-bottom: 19em;
-  }
-
-  /* line 120, ../sass/screen.scss */
-  .prompt {
-    padding-top: 20em;
-    padding-bottom: 30em;
-  }
-
-  /* line 125, ../sass/screen.scss */
-  .play-game {
-    padding-top: 15em;
-    padding-bottom: 19em;
-  }
-}
-@media only screen and (max-width: 736px) {
-  /* line 133, ../sass/screen.scss */
-  .start-game {
-    padding-top: 30em;
-    padding-bottom: 19em;
-  }
-
-  /* line 138, ../sass/screen.scss */
-  .play-game {
-    padding-top: 25em;
-    padding-bottom: 20em;
-  }
-}
-@media only screen and (max-width: 568px) {
-  /* line 147, ../sass/screen.scss */
-  .prompt {
-    padding-bottom: 10em;
-  }
-
-  /* line 151, ../sass/screen.scss */
-  .play-game {
-    padding-top: 3.5em;
-  }
-}
-@media only screen and (max-width: 500px) {
-  /* line 158, ../sass/screen.scss */
   body {
     padding: none;
   }
 
-  /* line 162, ../sass/screen.scss */
-  h1 {
-    font-size: 56px;
-  }
-
-  /* line 166, ../sass/screen.scss */
-  h2 {
-    font-size: 26px;
-  }
-
-  /* line 170, ../sass/screen.scss */
-  .head,
-  .timer,
-  .canvas {
-    padding: 12px;
-  }
-
-  /* line 176, ../sass/screen.scss */
-  .canvas {
-    overflow: hidden;
-  }
-
-  /* line 179, ../sass/screen.scss */
+  /* line 100, ../sass/screen.scss */
   .canvas {
     width: 92%;
-    height: 70%;
+    height: 90%;
+  }
+}
+@media only screen and (max-width: 375px), screen and (max-height: 640px) {
+  /* line 108, ../sass/screen.scss */
+  body {
+    padding: none;
+  }
+
+  /* line 112, ../sass/screen.scss */
+  .prompt {
+    padding-bottom: 6em;
+  }
+
+  /* line 116, ../sass/screen.scss */
+  .canvas {
+    width: 92%;
+    height: 90%;
+  }
+}
+@media only screen and (max-width: 320px), screen and (max-height: 568px) {
+  /* line 123, ../sass/screen.scss */
+  body {
+    padding: none;
+  }
+
+  /* line 127, ../sass/screen.scss */
+  .play-game {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  /* line 132, ../sass/screen.scss */
+  .canvas {
+    width: 92%;
+    height: 89%;
+  }
+}
+@media only screen and (max-width: 412px), screen and (max-width: 732px) {
+  /* line 139, ../sass/screen.scss */
+  body {
+    padding: none;
+  }
+
+  /* line 143, ../sass/screen.scss */
+  .play-game {
+    padding-top: 3em;
+    padding-bottom: 4em;
+  }
+
+  /* line 148, ../sass/screen.scss */
+  .canvas {
+    width: 92%;
+    height: 90%;
   }
 }
