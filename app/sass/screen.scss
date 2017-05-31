@@ -134,8 +134,8 @@ h2 {
     height: 89%;
   }
 }
-//nexus 5x -- still problematic
-@media only screen and (max-width: 412px), screen and (max-width: 732px) {
+/** //nexus 5x -- still problematic
+@media only screen and (max-width: 412px), screen and (max-height: 732px) {
   body {
     padding: none;
   }
@@ -149,4 +149,4 @@ h2 {
     width:92%;
     height: 90%;
   }
-}
+}**/

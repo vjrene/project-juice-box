@@ -216,21 +216,19 @@ h2 {
     height: 89%;
   }
 }
-@media only screen and (max-width: 412px), screen and (max-width: 732px) {
-  /* line 139, ../sass/screen.scss */
+/** //nexus 5x -- still problematic
+@media only screen and (max-width: 412px), screen and (max-height: 732px) {
   body {
     padding: none;
   }
 
-  /* line 143, ../sass/screen.scss */
   .play-game {
     padding-top: 3em;
     padding-bottom: 4em;
   }
 
-  /* line 148, ../sass/screen.scss */
   .canvas {
-    width: 92%;
+    width:92%;
     height: 90%;
   }
-}
+}**/
